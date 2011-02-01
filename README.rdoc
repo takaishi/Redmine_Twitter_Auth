@@ -1,0 +1,11 @@
+
+* インストール
+/vender/pluginの中にtwit_authを移動．
+
+/app/views/account/login.rhtml のどこかに"<p><a href="/twitauth/login">Twitterでログイン</a></p>"を挿入，そこからログインできるはず．
+
+あらかじめ，Twitterと同じアカウントを作成しておく必要がある．パスワードは適当でOK．
+
+OAuthで使うcallback_url，request.host_with_portがうまく動かないので今は手動で書き換え．
+
+/vendor/plugins/twit_auth/app/controllers/twitauth_controller.rb の@@callback_urlを書き換え．
